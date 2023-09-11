@@ -13,7 +13,7 @@ import { Component } from "react";
 
 class App extends Component {
   state = {
-    SetAsin: "",
+    setAsin: "",
   };
 
   changeAsin = (asin) => {
@@ -27,12 +27,12 @@ class App extends Component {
         {/* <MyJumbotron /> */}
         {/* <AllTheBooks /> */}
         <Row>
-          <Col xs={6}>
+          <Col xs={9}>
             <BookList books={fantasy} asinMethod={this.changeAsin} />
           </Col>
 
-          <Col xs={6}>
-            <CommentArea />
+          <Col xs={3}>
+            <CommentArea asin={this.state.setAsin} />
           </Col>
         </Row>
 
